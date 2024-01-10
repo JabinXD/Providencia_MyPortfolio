@@ -1,0 +1,63 @@
+// Footer.module.scss
+@import "../../styles/contants.scss";
+
+.wrapper {
+    background: #1b1b1b; /* Dark background color */
+    color: #ffffff; /* Light text color */
+  }
+  
+  .container {
+    gap: 2rem;
+    @media (max-width: $sm) {
+      flex-direction: column;
+      gap: 2rem;
+      align-items: flex-start;
+    }
+  
+    .left {
+      flex: 3;
+      > * {
+        display: block;
+        color: #ffffff; /* Light text color */
+      }
+  
+      > :nth-child(2) {
+        margin-top: 3rem;
+  
+        a {
+          text-decoration: underline;
+          color: #ffa500; /* Orange link color */
+        }
+      }
+    }
+  
+    .right {
+      flex: 1;
+      .info {
+        margin-bottom: 1rem;
+        > * {
+          display: block;
+          color: #ffffff; /* Light text color */
+        }
+      }
+  
+      .menu {
+        @media (max-width: $sm) {
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        list-style: none;
+       li, a {
+          cursor: pointer;
+          color: #ffffff;
+          text-decoration: none;
+          &:hover {
+            color: #ffa500; 
+          }
+        }
+      }
+    }
+  }
