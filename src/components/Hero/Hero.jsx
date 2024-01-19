@@ -13,12 +13,18 @@ const Hero = () => {
         className={`innerWidth ${css.container}`}
       >
         <div className={css.upperElements}>
-          <motion.span className="primaryText" variants={fadeIn("right", "tween", 0.2, 1)}>
-            Hey There,
+          <motion.span
+            className="primaryText"
+            variants={fadeIn("right", "tween", 0.2, 1)}
+          >
+            Hey There Welcome,
             <br />
-            I'm Jerwin.
+            I'm Jabin
           </motion.span>
-          <motion.span className="secondaryText"variants={fadeIn("left", "tween", 0.4, 1)}>
+          <motion.span
+            className="secondaryText"
+            variants={fadeIn("left", "tween", 0.4, 1)}
+          >
             I am aspiring web
             <br />
             developer, And I love coding.{" "}
@@ -29,25 +35,39 @@ const Hero = () => {
           variants={fadeIn("up", "tween", 0.3, 1)}
           className={css.person}
         >
-          <motion.img variants={slideIn("up", "tween", 0.5, 1.3)} src="./person.png" alt="" />
+          <motion.img
+            variants={slideIn("up", "tween", 0.5, 1.3)}
+            src="./person.png"
+            alt=""
+          />
         </motion.div>
 
-        <a className={css.email} href="mailto:jerwinbolerostenajura@gmail.com">
-        jerwinbolerostenajura@gmail.com
+        <a
+          className={css.email}
+          href="mailto:jabinjun.providencia@sccpag.edu.ph"
+        >
+          jabinjun.providencia@sccpag.edu.ph
         </a>
 
         <div className={css.lowerElements}>
-          <motion.div variants={fadeIn("right", "tween", 0.3, 1)} className={css.experience}>
-            <div className="primaryText">2</div>
+          <motion.div
+            variants={fadeIn("right", "tween", 0.3, 1)}
+            className={css.experience}
+          >
+            <div className="primaryText">3</div>
             <div className="secondaryText">
               <div>Years</div>
               <div>Experience</div>
             </div>
           </motion.div>
 
-          <motion.div variants={fadeIn("left", "tween", 0.5, 1)} className={css.certificate}>
-            <img src="./certificate.png" alt="" />
-            <span>BSIT STUDENT</span>
+          <motion.div
+            variants={fadeIn("left", "tween", 0.5, 1)}
+            className={css.certificate}
+          >
+            <img src="./logo.png" alt="" />
+            <span> BSIT STUDENT</span>
+            <br></br>
             <span>SAINT COLUMBAN COLLEGE</span>
           </motion.div>
         </div>

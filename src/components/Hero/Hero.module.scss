@@ -2,63 +2,78 @@
 @import '../../styles/contants.scss';
 
 .wrapper {
-    overflow: hidden;
-    background: #1b1b1b; /* Dark background color */
-    color: #ffffff; /* Light text color */
+  overflow: hidden;
+  background: #232e38;
+  /* Dark background color - Adjust as needed */
+  color: #21849d;
+  /* Light text color - Adjust as needed */
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+
+  .upperElements {
+    @media (max-width: $sm) {
+      justify-content: center;
+      text-align: center;
+      gap: 2rem;
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: #ecf0f1;
+    /* Light text color - Adjust as needed */
+    padding: 2rem;
+    /* Add padding for better spacing */
   }
-  
-  .container {
-    position: relative;
-    z-index: 1;
-  
-    .upperElements {
-      @media (max-width: $sm) {
-        justify-content: center;
-        text-align: center;
-        gap: 2rem;
-      }
+
+  .lowerElements {
+
+    @media (max-width: $sm),
+    (max-width: $md) {
+      margin-top: 4rem;
+      gap: 6rem;
+      justify-content: center;
+    }
+
+    margin-top: 12rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: #3498db;
+    /* Accent color for lower elements - Adjust as needed */
+    padding: 2rem;
+    /* Add padding for better spacing */
+
+    .experience {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      color: #ffffff; /* Light text color */
-    }
-  
-    .lowerElements {
-      @media (max-width: $sm), (max-width: $md) {
-        margin-top: 4rem;
-        gap: 6rem;
-        justify-content: center;
+      gap: 1rem;
+
+      > :nth-child(2) {
+        line-height: 25px;
       }
-      margin-top: 12rem;
+    }
+
+    .certificate {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      color: #ffffff; /* Light text color */
-  
-      .experience {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        > :nth-child(2) {
-          line-height: 25px;
-        }
-      }
-  
-      .certificate {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-  
-        img {
-          margin-bottom: 1rem;
-          width: 3.5rem;
-        }
+      flex-direction: column;
+      align-items: center;
+
+      img {
+        margin-bottom: 1rem;
+        width: 3.5rem;
       }
     }
-  
+  }
+
     .person {
-      @media (max-width: $sm), (max-width: $md) {
+  
+      @media (max-width: $sm),
+      (max-width: $md) {
         position: relative;
         left: 0;
         background-size: 20rem;
@@ -67,30 +82,34 @@
         justify-content: center;
         background-position: bottom;
       }
+  
       position: absolute;
       bottom: -5em;
       margin: auto;
-      background-image: url("../splash.png");
       background-repeat: no-repeat;
       background-size: 28rem;
       left: 28%;
   
       img {
         @media (max-width: $sm) {
-          width: 23rem;
+          width: 70%; // Adjust the width as needed
+          max-width: 5rem; // Set a maximum width if necessary
         }
+  
         margin-bottom: -5px;
       }
     }
-  
-    .email {
-      @media (max-width: $sm) {
-        position: relative;
-        display: none;
-      }
-      position: absolute;
-      top: 50%;
-      left: 0;
-      color: #ffa500; /* Orange text color */
+
+  .email {
+    @media (max-width: $sm) {
+      position: relative;
+      display: none;
     }
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+    color: #e67e22;
+    /* Orange text color for email - Adjust as needed */
   }
+}
